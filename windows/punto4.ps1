@@ -11,4 +11,4 @@ foreach ($user in $localUsers) {
     }
 }
 
-$result | Format-Table -AutoSize
+$result | Format-Table -AutoSize | Out-File -FilePath "punto4.txt"

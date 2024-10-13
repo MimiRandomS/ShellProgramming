@@ -53,58 +53,62 @@ run_script() {
 
 welcome
 while true; do
-    welcome
     show_menu
     read -p "Enter your choice: " choice
     
     case $choice in
         1)
             echo "Running punto1.sh..."
+            sleep 1
             run_script "punto1.sh"
             ;;
 
         2)
             echo "Running punto2.sh..."
+            sleep 1
             run_script "punto2.sh"
             ;;
 
         3)
             read -p "Enter the word to search for: " word
             read -p "Enter the path to the file: " path
-            
             echo "Running punto3.sh with parameters '$word' and '$path'..."
+            sleep 1
             run_script "punto3.sh" "$word" "$path"
             ;;
 
         4a)
             echo "Running Users Script 4a (crearUsuarios.sh)..."
+            sleep 1
             run_script "crearUsuarios.sh"
             ;;
 
 
         4b)
             echo "Running Users Info 4b (punto4.sh)..."
+            sleep 1
             run_script "punto4.sh"
             ;;
 
         5)
             read -p "Enter the directory to search in: " directory
             read -p "Enter the permissions to search for (e.g., -rw-r--r--): " permissions
-            
             echo "Running punto5.sh with parameters '$directory' and '$permissions'..."
+            sleep 1
             run_script "punto5.sh" "$directory" "$permissions"
             ;;
 
         7a)
             read -p "Enter the name of the item: " name
             read -p "Enter the directory to search in: " directory
-            
             echo "Running punto7a.sh with parameters '$name' and '$directory'..."
+            sleep 1
             run_script "punto7a.sh" "$name" "$directory"
             ;;
 
         7b)
             echo "Running punto7b.sh to check failed root logins..."
+            sleep 1
             run_script "punto7b.sh"
             ;;
 
