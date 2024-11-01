@@ -111,10 +111,8 @@ while ($true) {
             Start-Sleep -Seconds $sleepDuration1
         }
         5 {
-            $directory = Read-Host "Enter the directory to search in"
-            $permissions = Read-Host "Enter the permissions to search for (FullControl, Modify, ReadAndExecute...)"
             Write-Host "Running punto5.ps1 with parameters '$directory' and '$permissions'..."
-            Invoke-Script "punto5.ps1" $directory $permissions
+            Invoke-Script "punto5.ps1"
             Start-Sleep -Seconds $sleepDuration1
         }
         7a {
