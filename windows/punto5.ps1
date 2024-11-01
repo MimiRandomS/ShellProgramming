@@ -33,10 +33,10 @@ $files = Get-ChildItem -Path $path -File
 $matchingFiles = @()
 foreach ($file in $files) {
     $acl = Get-Acl -Path $file.FullName
-    foreach ($access in $acl.Access) {
-        if ($access.IdentityReference -eq "Everyone" -and $access.FileSystemRights -eq "FullControl") {
+    if ($acl.Access.Count -gt 0) {
+        $firstAccess = $acl.Access[0]
+        if ($firstAccess.IdentityReference -eq "Everyone" -and $firstAccess.FileSystemRights -eq "FullControl") {
             $matchingFiles += $file
-            break
         }
     }
 }
