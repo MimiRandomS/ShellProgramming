@@ -49,7 +49,7 @@ function menu {
     Write-Host "|       Powershell Scripts Menu - Choose an option:        |"
     Write-Host "|----------------------------------------------------------|"
     Write-Host "|  1.  Hello World                       (punto1.ps1)       |"
-    Write-Host "|  2.  Number of lines in /etc/profile   (punto2.ps1)       |"
+    Write-Host "|  2.  Number of lines in ...\etc\hosts   (punto2.ps1)       |"
     Write-Host "|  3.  Search word in file               (punto3.ps1)       |"
     Write-Host "|  4a. Create users                      (crearUsuarios.ps1)|"
     Write-Host "|  4b. Users info                        (punto4.ps1)       |"     
