@@ -2,7 +2,7 @@ Clear-Host
 
 function Get-FailedLoginAttempts {
     param (
-        [string]$username = "root",
+        [string]$username = "Administrator",
         [int]$eventID = 4625
     )
 
@@ -25,4 +25,4 @@ function Get-FailedLoginAttempts {
     }
 }
 
-Get-FailedLoginAttempts -username "root"
+Get-FailedLoginAttempts -username "Administrator"
