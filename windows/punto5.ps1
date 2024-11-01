@@ -1,12 +1,7 @@
 Clear-Host
 
-if (-not $args[0] -or -not $args[1]) {
-    Write-Host "Uso: $($MyInvocation.MyCommand.Name) <path> <permission>"
-    exit
-}
-
-$path = $args[0]
-$permission = $args[1]
+$path = Read-Host "Enter the directory to search in"
+$permission = Read-Host "Enter the permissions to search for (FullControl, Modify, ReadAndExecute...)"
 
 if (-Not (Test-Path -Path $path -PathType Container)) {
     Write-Host "Directorio invalido."
