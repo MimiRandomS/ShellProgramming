@@ -1,7 +1,7 @@
 Clear-Host
 
 $pass = ConvertTo-SecureString "Us3r" -AsPlainText -Force
-$name = "ShellUser"
+$name = "PowerUser"
 
 for ($i = 1; $i -le 5; $i++) {
     $userName = "$name $i"
